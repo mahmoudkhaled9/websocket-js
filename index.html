@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  page title-->
+    	<title>MQTT WebSocket Client</title>
+    
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    
+    <!--    css links-->
+        <link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+
+<body>
+	<h1>MQTT WebSocket Client</h1>
+    <div id="broker" >
+        <h2>Connection</h2>
+        <div class="panel">
+        <p>Host: <input class="txt" id="host" type="text" placeholder="Enter a valid host">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port: <input class="txt" id="port" type="text" placeholder="Enter a valid port" ></p>
+        <input class="but" id="connect-button" type="button" value="Connect">&nbsp;&nbsp;&nbsp;
+        <input class="but" id="disconnect-button" type="button" value="Disconnect">
+        </div>
+    </div>
+    <div id="publish">
+        <h2>Publish</h2>
+        <div class="panel">
+        <p>Topic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="txt" id="pub-topic-text" type="text" value="testtopic"></p>
+        <p>QoS: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="txt" id="qos-text" type="text" value="0"></p>
+        <p>Message: </p><p><textarea class="txt" id="payload-text" type="text" value=""></textarea></p>
+        <input class="but" id="publish-button" type="button" value="Publish">
+        </div>
+    </div>
+    <div id="subscribe">
+        <h2>Subscription</h2>
+        <div class="panel">
+        <p>Topic: <input class="txt" id="sub-topic-text" type="text" value="testtopic"></p>
+        <p>
+        <input class="but" id="subscribe-button" type="button" value="Subscribe">&nbsp;&nbsp;&nbsp;
+        <input class="but" id="unsubscribe-button" type="button" value="Unsubscribe">
+        </p>
+        </div>
+    </div>
+    <div>
+        <h2>Messages</h2>
+        <div class="panel" id="debug">
+        </div>	
+    </div>
+	<script src="assets/js/mosquitto.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/Mahmoud.js"></script>
+	
+
+</body>
+</html>
+
+
+
+<!--this simple WebSocket Client page is made by mahmoud Kahled on 29 jun 2018 -->
